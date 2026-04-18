@@ -19,8 +19,9 @@
     // noUnused* overlap with @typescript-eslint/no-unused-vars, can disable if duplicative
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "ignoreDeprecations": "6.0",
     // use Node's module resolution algorithm, instead of the legacy TS one
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     // transpile JSX to React.createElement
     "jsx": "react-jsx",
     // interop between ESM and CJS modules. Recommended by TS
@@ -32,6 +33,7 @@
     // `tsdx build` ignores this option, but it is commonly used when type-checking separately with `tsc`
     "noEmit": true,
     // required to emit type files (`*.d.ts`)
-    "outDir": "dist"
+    "outDir": "dist",
+    "types": ["node"],
   }
 }
