@@ -27,5 +27,15 @@ export default defineConfig({
       name: "ReactFirebaseDB",
       fileName: "index",
     },
+    rollupOptions: {
+      external: ["react", "react-dom", "react/jsx-runtime"],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "react/jsx-runtime": "ReactJSXRuntime",
+        },
+      },
+    },
   },
 });
